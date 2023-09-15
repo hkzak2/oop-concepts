@@ -91,7 +91,8 @@ class CurrentAccount(BankAccount):
     
     @abstractmethod
     def deposit(self, amount):
-
+        super().deposit(amount)
+        self.add_interest()
  
 current_account = CurrentAccount("John Doe", "1234567890")
 current_account.deposit(2000)
