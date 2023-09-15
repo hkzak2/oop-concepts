@@ -3,6 +3,6 @@
 
 # Create an anaconda environment
 ## steps
-* - Create a new environment
-* - Activate the environment
-* - Install the required packages
+*  Create a new environment
+*  Activate the environment
+*  Install the required packages
