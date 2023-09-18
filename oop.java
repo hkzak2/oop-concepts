@@ -4,6 +4,7 @@ public class Main {
         System.out.println("Hello World");
         Int a = 5;
         Int b = 10;
+        String accountNumber = "123456";
 
         if (a > b) {
             System.out.println("a is greater than b");
@@ -12,6 +13,10 @@ public class Main {
         }
         else {
             System.out.println("a is equal to b");
+        }
+
+        String addToNumber(Int a, Int b){
+            return a + b;     
         }
     
 
