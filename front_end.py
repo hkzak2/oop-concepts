@@ -10,6 +10,11 @@ st.set_page_config(
     layout="wide",
 )
 
+
+# streamlit app with emoji
+st.title("Inventory Management System 📦")
+st.write("Welcome to the Inventory Management System")
+
 # initialize session state
 if "inventory" not in st.session_state:
     st.session_state.inventory = Inventory()
