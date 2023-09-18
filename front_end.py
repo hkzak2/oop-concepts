@@ -10,8 +10,9 @@ st.set_page_config(
     layout="wide",
 )
 
-# initialize empty list to store products
-inventory = Inventory()
+# initialize session state
+if "inventory" not in st.session_state:
+    st.session_state.inventory = Inventory()
 
 # create product objects with streamlit
 product_name = st.text_input("Product Name")
@@ -23,13 +24,15 @@ add_product = st.button("Add Product")
 
 if add_product:
     product = Product(product_name, product_price, product_quantity)
-    inventory.add_product(product)
+    st.session_state.inventory.add_product(product)
 
 # display inventory
-for product in inventory.items:
-    st.write(f"Product: {product.name} | Price: ${product.price} | Quantity: {product.quantity}")
-
-
+if st.session_state.inventory.items:
+    st.write("Inventory:")
+    for product in st.session_state.inventory.items:
+        st.write(f"Product: {product.name} | Price: ${product.price} | Quantity: {product.quantity}")
+else:
+    st.write("Inventory is empty.")
 
 # testing
 # st.title("Inventory Management")
