@@ -32,3 +32,20 @@ b = 5
 while a < b:
     print("a is less than b")
     a += 1
+
+# function to add to variables
+def subtraction_to_numbers(a, b):
+    return a + b
+
+# method overloading 
+def add_numbers(*args):
+    return sum(args)
+add_numbers(1,2,3,5)
+
+def add_numbers(a, b):
+    arr = []
+    arr.append(a)
+    arr.append(b)
+    return sum(arr)
+
+add_numbers(1,2)

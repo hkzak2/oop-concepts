@@ -31,7 +31,6 @@ class Product:
         else:
             print(f"Insufficient {self.name} in inventory")
 
-
 # initialize empty list to store products
 inventory = []
 
