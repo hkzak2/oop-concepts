@@ -21,15 +21,16 @@ class TaskManager:
 
     def update_task(self, task: Task):
         for index, t in enumerate(self.tasks):
+            print("completed: " , t.completed, task.completed)
             if t.title == task.title:
-                t = task
-                break
+                t.title = task.title
+                t.description = task.description
+                t.completed = task.completed
                 
     def delete_task(self, task: Task):
         for index, t in enumerate(self.tasks):
             if t.title == task.title:
                 self.tasks.pop(index)
-                break
 
 app = FastAPI()
 
