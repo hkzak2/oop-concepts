@@ -9,3 +9,15 @@
     * conda activate myenv
 *  Install the required packages
     * pip install streamlit
+
+# Run the app
+## steps
+*  Run the app
+    * streamlit run app.py
+
+# FastAPI
+## install
+* pip install fastapi uvicorn
+## steps
+*  Run the app
+    * uvicorn app:app --reload
